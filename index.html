@@ -4,46 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Linking Styles -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Title -->
-    <title>Huzaifa keep</title>
-    <!-- Tailwind CDN -->
+    <title>Todo Keep</title>
+    <!-- Tailwind Css CDN link -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Remix Icon CDN -->
+    <!-- Linking Style File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Remix Icon Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="Asserts/logo.png" type="image/x-icon">
-
 </head>
 
 <body class="bg-zinc-900">
-    <div class="header w-full h-16 bg-yellow-300 flex items-center justify-center gap-5 relative">
-        <button class=" delAll left-5 bg-red-500 px-4 py-2 rounded-md absolute hover:bg-red-400 hover:text-black">Delect
+    <header class="header w-full h-[70px] bg-yellow-300 gap-4 flex items-center px-4 justify-center">
+        <button class="delAll bg-red-500 absolute  py-2 px-3 rounded-lg left-4  text-white font-bold text-xl">Delect
             All</button>
-        <div id="logo" class="text-3xl font-bold">
-            <span class="uppercase bg-yellow-400 py-1 px-3 rounded-xl">Keep</span>
-            <span class="uppercase bg-yellow-400 py-1 px-3 rounded-xl">Notes</span>
-        </div>
-        <img src="Asserts/logo.png" alt="">
+        <button class="headerBtn">Keep</button><button class="headerBtn">Notes</button>
+        <i class="ri-sticky-note-fill text-yellow-500 text-5xl"></i>
+    </header>
+    <div
+        class="addBtn bg-yellow-500 w-[45px] h-[45px] grid place-items-center rounded-[50%] absolute top-[80px] right-4">
+        <i class="ri-add-line text-white text-4xl"></i>
     </div>
-    <main
-        class="container w-full h-[calc(100vh-64px)] items-start justify-center flex gap-8 flex-shrink-0 flex-wrap relative py-10 px-5 ">
-
-        <button class="mainBtn flex z-10 py-3 px-4 rounded-md  fixed right-[10px] top-[10%] gap-3  duration-700">
-            <span class="mainBtnIcon">
-                <i class="ri-add-line bg-yellow-400 p-2 rounded-full text-2xl opacity-100"></i>
-            </span>
-            <p class="text-sm font-bold text-slate-200 uppercase translate-x-10 opacity-0 hidden underline">Add a new
-                task</p>
-        </button>
-
-
-
+    <main class="mainContainer flex flex-shrink-0 flex-wrap w-full justify-center px-10">
     </main>
-    <script src="script.js"></script>
+    <script src="dist/app.js" type="module"></script>
 </body>
 
 </html>

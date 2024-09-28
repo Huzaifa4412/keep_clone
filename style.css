@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*  Rest Css */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@
     list-style-type: none;
     text-decoration: none;
     font-family: 'poppins';
-    color: #fff;
 }
 
 html,
@@ -19,94 +17,44 @@ body {
     width: 100%;
 }
 
-.mainBtn {
-    transform: all 0.8s linear;
-    -webkit-transform: all 0.8s linear;
-    -moz-transform: all 0.8s linear;
-    -ms-transform: all 0.8s linear;
-    -o-transform: all 0.8s linear;
+/* Styling Header ------------------------------------------------  */
+.header .headerBtn {
+    @apply text-white font-bold py-2 px-4 rounded-xl text-2xl bg-yellow-400;
 }
 
-.mainBtn:hover {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-
-    &:hover .mainBtnIcon i {
-        opacity: 0;
-    }
-
-    &:hover p {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transition: 0.5s linear;
-        -webkit-transition: 0.5s linear;
-        -moz-transition: 0.5s linear;
-        -ms-transition: 0.5s linear;
-        -o-transition: 0.5s linear;
-        display: block;
-        opacity: 1;
-    }
+/* Styling note */
+main {
+    padding: 30px 20px;
+    @apply gap-6
 }
 
-textarea::-webkit-scrollbar {
-    width: 6px;
-}
-
-textarea::-webkit-scrollbar-thumb {
-    background-color: #111;
+.note {
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Styling COntainer */
-.note {
-    @apply w-[280px] h-[250px] bg-white rounded-md overflow-hidden relative
-}
-
-.hidden {
-    display: none;
-}
-
-.main {
-    font-size: 15px;
-    color: slategray;
-}
-
-main {
+.operationBar {
     width: 100%;
-    height: 100%;
+    height: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 15px;
+    gap: 10px;
+    font-size: 20px;
 }
 
-.header {
-    position: relative;
-}
-
-@media screen and (max-width: 730px) {
-    .header {
-        justify-content: end;
-        padding-right: 10px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .header {
-        & span:nth-child(1) {
-            display: none;
-        }
-
-        & span:nth-child(2) {
-            display: block !important;
-            font-size: 20px !important;
-
-        }
-    }
+textarea {
+    width: 100%;
+    height: 77%;
+    outline: none;
+    padding: 0px 15px 10px 15px !important;
+    resize: none !important;
 }
